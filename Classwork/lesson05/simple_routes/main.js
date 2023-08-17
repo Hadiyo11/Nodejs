@@ -7,10 +7,8 @@ const routeResponseMap = {
   "/hello": "<h1>Say hello by emailing us here</h1>",
   "/error": "<h1>Sorry the page you are looking for is not here.</h1>",
 };
-
 const port = 3000,
   http = require("http"),
-
   httpStatus = require("http-status-codes"),
   app = http.createServer((req, res) => {
     res.writeHead(200, {
@@ -22,6 +20,6 @@ const port = 3000,
       res.end("<h1>Welcome!</h1>");
     }
   });
-
 app.listen(port);
-console.log(`The server has started and is listening on port number:${port}`);
+console.log(`The server has started and is listening on port number:
+➥ ${port}`);
