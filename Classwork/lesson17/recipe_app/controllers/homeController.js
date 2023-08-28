@@ -15,11 +15,7 @@ var courses = [
   }
 ];
 
-exports.showCourses = (req, res) => {
-  res.render("courses", {
-    offeredCourses: courses
-  });
-};
+
 
 exports.index = (req, res) => {
   res.render("index");
