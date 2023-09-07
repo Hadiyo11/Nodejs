@@ -31,7 +31,7 @@
 
 //Page 18
 const http = require('http')
-const fs = require('fs')
+const fs = require('fs')//fs helps us interact with files in our folder
 const homePage = fs.readFileSync('index.html')
 const aboutPage = fs.readFileSync('about.html')
 const contactPage = fs.readFileSync('contact.html')
