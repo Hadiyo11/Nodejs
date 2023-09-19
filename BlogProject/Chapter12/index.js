@@ -6,6 +6,7 @@ const expressSession = require('express-session');
 const authMiddleware = require('./middleware/authMiddleware');
 const redirectIfAuthenticatedMiddleware =
 require('./middleware/redirectIfAuthenticatedMiddleware')
+const flash = require('connect-flash');
 
 
 const newPostController = require('./controllers/newPost')
@@ -35,6 +36,8 @@ app.use(expressSession({
     }))
 
 app.use('/posts/store', validateMiddleware)
+app.use(flash())
+
 global.loggedIn = null;
 app.use("*", (req, res, next) => {
 loggedIn = req.session.userId;
